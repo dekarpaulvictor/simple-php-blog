@@ -13,7 +13,7 @@ following file name pattern: `yy-mm-dd_awesome-title.md`.
    `Parsedown` (a Markdown renderer) and `Bramus Router` (a routing library).
 
 2. Clone this repository: `git clone
-   https://github.com/dekarpaulvictor/simple-php-blog`
+   https://github.com/dekarpaulvictor/simple-php-blog.git`
 
 3. Run `composer install` in the repository's root directory to download and install the dependencies.
 
