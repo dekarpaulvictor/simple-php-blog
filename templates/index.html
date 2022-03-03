@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{ title }}
+{% endblock %}
+
+{% block navlinks %}
+  <li class="nav-item"><a href="./" class="nav-link active" aria-current="page">Home</a></li>
+  <li class="nav-item"><a href="blog" class="nav-link">Blog</a></li>
+  <li class="nav-item"><a href="about" class="nav-link">About</a></li>
+{% endblock %}
+
+{% block content %}
+  <section class="py-3 text-center container">
+    <div class="row py-lg-3">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Welcome</h1>
+        <p class="lead text-muted">This is a blog platform designed with
+        simplicity and ease of use as the guiding principles. Posts are written in
+        Markdown and stored as files in a <code>posts</code> directory.</p>
+        <p>Check out our top three articles.</p>
+      </div>
+    </div>
+  </section>
+  <div class="py-3 container">
+    <div class="row py-lg-3">
+      <div class="list-group">
+        {% for post in posts %}
+        <a href={{ "#{post.url}" }} class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">{{ post.title }}</h6>
+                <p class="mb-0 opacity-75">{{ post.excerpt }}...</p>
+              </div>
+              <small class="opacity-50 text-nowrap">{{ post.pretty_date }}</small>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
