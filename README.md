@@ -26,5 +26,5 @@ folder there is a `funcs.php` file that contains the post-parsing and post-rende
 # TODO
 
 1. Add controllers to edit, update and delete blog posts
-2. Store posts in a database
+2. Store posts in a database as opposed to flat files
 3. Let a user with `admin` or `edit` roles log in and create blog content
