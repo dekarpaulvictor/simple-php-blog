@@ -1,7 +1,7 @@
 <?php
 
 // Functions to get post titles, content and render posts
-// written in Markdown
+// that are written in Markdown
 
 function get_post_titles() {
 
@@ -18,7 +18,7 @@ function get_post_titles() {
     return $tempStore;
 }
 
-// Return an array of blog posts
+// Return an array of the blog posts
 function get_posts() {
 
     $post_titles = get_post_titles();
@@ -49,26 +49,11 @@ function get_posts() {
         $post->body = strip_tags($arr[1]);
         $post->excerpt = explode('.', $post->body)[0];
 
-        //$tempStore[] = $post;
         array_push($tempStore, $post);
     }
 
     return $tempStore;
 }
 
-// Find post by year, month and name
-function find_post($year, $month, $name){
-
-    foreach(get_post_titles() as $idx => $v){
-        if( strpos($v, "$year-$month") !== false && strpos($v, $name.'.md') !== false){
-
-            // Use the get_posts method to return
-            // a properly parsed object
-
-            $arr = get_posts($idx + 1, 1);
-            return $arr[0];
-        }
-    }
-
-    return false;
-}
+// TODO
+// Write controller functions to edit, update and delete posts
