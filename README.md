@@ -5,7 +5,7 @@ Bootstrap.
 
 Blog posts are stored as Markdown files in the `posts` folder using the
 following file name pattern: `yy-mm-dd_awesome-title.md`. In the `includes`
-folder there is a `funcs.php` file that contains the post-parsing logic.
+folder there is a `funcs.php` file that contains the post-parsing and post-rendering logic.
 
 ## Local Installation
 
